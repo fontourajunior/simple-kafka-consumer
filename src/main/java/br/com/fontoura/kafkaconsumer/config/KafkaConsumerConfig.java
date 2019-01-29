@@ -13,7 +13,7 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 
-import br.com.fontoura.kafkaconsumer.server.KafkaConsumerService;
+import br.com.fontoura.kafkaconsumer.server.ListenerService;
 
 @EnableKafka
 @Configuration
@@ -46,8 +46,8 @@ public class KafkaConsumerConfig {
     }
 
     @Bean
-    public KafkaConsumerService listener() {
-        return new KafkaConsumerService();
+    public ListenerService listener() {
+        return new ListenerService();
     }
 
 }
